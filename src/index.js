@@ -10,7 +10,7 @@ const PRODUCTS = [
   { category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' },
   { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
   { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
-  { category: 'Electronics', price: '$699.99', stocked: false, name: 'iPhone 13' },
+  { category: 'Electronics', price: '$699.99', stocked: true, name: 'iPhone 13' },
   { category: 'Electronics', price: '$799.99', stocked: false, name: 'iPhone 14' },
   { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }];
 

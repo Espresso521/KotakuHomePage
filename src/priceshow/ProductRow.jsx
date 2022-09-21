@@ -4,7 +4,8 @@ class ProductRow extends React.Component {
 render() {
     const product = this.props.product;
     const name = product.stocked ?
-    product.name : /*#__PURE__*/
+    React.createElement("span", { style: { color: 'green' } },
+    product.name) : /*#__PURE__*/
     React.createElement("span", { style: { color: 'red' } },
     product.name);
 

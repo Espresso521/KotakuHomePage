@@ -30,7 +30,6 @@ render() {
     React.createElement("th", null, "Name"), /*#__PURE__*/
     React.createElement("th", null, "Price"))), /*#__PURE__*/
 
-
     React.createElement("tbody", null, rows)));
 
 
