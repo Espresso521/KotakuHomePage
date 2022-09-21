@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 
-class ProductCategoryRow extends Component {
-render() {
-    const category = this.props.category;
-    return /*#__PURE__*/(
-    React.createElement("tr", null, /*#__PURE__*/
-    React.createElement("th", { colSpan: "55" },
-    category)));
-
-
-}}
+class ProductCategoryRow extends React.Component {
+    render() {
+      const category = this.props.category;
+      return (
+        <tr>
+          <th colSpan="2">
+            {category}
+          </th>
+        </tr>
+      );
+    }
+  }
 
 export default ProductCategoryRow;

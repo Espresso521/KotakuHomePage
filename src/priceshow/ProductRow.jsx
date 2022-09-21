@@ -1,21 +1,23 @@
 import React from 'react'
 
 class ProductRow extends React.Component {
-render() {
-    const product = this.props.product;
-    const name = product.stocked ?
-    React.createElement("span", { style: { color: 'green' } },
-    product.name) : /*#__PURE__*/
-    React.createElement("span", { style: { color: 'red' } },
-    product.name);
+    render() {
+      const product = this.props.product;
+      const name = product.stocked ?
+        product.name :
+        <span style={{color: 'red'}}>
+          {product.name}
+        </span>;
+  
+      return (
+        <tr>
+          <td>{name}</td>
+          <td>{product.price}</td>
+        </tr>
+      );
+    }
+  }
+  
 
-
-    return /*#__PURE__*/(
-    React.createElement("tr", null, /*#__PURE__*/
-    React.createElement("td", null, name), /*#__PURE__*/
-    React.createElement("td", null, product.price)));
-
-
-}}
 
 export default ProductRow;
