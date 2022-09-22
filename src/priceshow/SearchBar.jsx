@@ -1,43 +1,45 @@
-import React, {  } from 'react'
+import React, { } from 'react'
 
 class SearchBar extends React.Component {
     constructor(props) {
-      super(props);
-      this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-      this.handleInStockChange = this.handleInStockChange.bind(this);
+        super(props);
+        this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+        this.handleInStockChange = this.handleInStockChange.bind(this);
     }
-    
+
     handleFilterTextChange(e) {
-      this.props.onFilterTextChange(e.target.value);
+        this.props.onFilterTextChange(e.target.value);
     }
-    
+
     handleInStockChange(e) {
-      this.props.onInStockChange(e.target.checked);
+        this.props.onInStockChange(e.target.checked);
     }
-    
+
     render() {
-      return (
-        <form>
-          <input
-            type="text"
-            placeholder="Search..."
-            value={this.props.filterText}
-            onChange={this.handleFilterTextChange}
-          />
-          <p>
-            <input
-              type="checkbox"
-              checked={this.props.inStockOnly}
-              onChange={this.handleInStockChange}
-            />
-            {' '}
-            Only show products in stock
-          </p>
-        </form>
-      );
+        return (
+            <form>
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    value={this.props.filterText}
+                    onChange={this.handleFilterTextChange}
+                />
+                <p>
+                    <input
+                        id='check'
+                        type="checkbox"
+                        checked={this.props.inStockOnly}
+                        onChange={this.handleInStockChange}
+                    />
+                    <label htmlFor="check" onClick={null}>
+                        Only show products in stock
+                    </label>
+                </p>
+            </form>
+        );
     }
-  }
-  
-   
-  
+}
+
+
+
 export default SearchBar;
