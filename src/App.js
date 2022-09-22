@@ -1,18 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 import { useState } from 'react'
 
-function App() {
+function App () {
 
   const [num, setNum] = useState(1)
 
-  let fn = () => {
-    console.log('add 1')
+  const fn = () => {
+    // console.log('add 1')
     setNum(num + 1)
   }
 
-  let fnDel = () => {
-    console.log('del 1')
+  const fnDel = () => {
+    // console.log('del 1')
     setNum(num - 1)
   }
 
@@ -43,7 +43,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
