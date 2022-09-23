@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import FilterableProductTable from './priceshow/FilterableProductTable';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import reportWebVitals from './reportWebVitals'
+//import FilterableProductTable from './priceshow/FilterableProductTable';
 //import Life from './test/Life'
 import App from './App'
 
@@ -14,14 +14,14 @@ const PRODUCTS = [
   { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
   { category: 'Electronics', price: '$699.99', stocked: true, name: 'iPhone 13' },
   { category: 'Electronics', price: '$799.99', stocked: false, name: 'iPhone 14' },
-  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }];
+  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }]
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <App products={PRODUCTS} />
   </React.StrictMode>
-);
+)
 
 // function tick() {
 //   const element = (
@@ -39,4 +39,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()

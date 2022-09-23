@@ -2,6 +2,8 @@ import logo from './logo.svg'
 import './App.css'
 import { useState } from 'react'
 
+let inter = null
+
 function App () {
 
   const [num, setNum] = useState(1)
@@ -21,6 +23,25 @@ function App () {
     fontSize: '51px'
   }
 
+  const autoAdd = (flag = true) => {
+    console.log('Mouse down!')
+    const tt = () => {
+      inter = setInterval(() => {
+        if (flag)
+          setNum(num => num + 1)
+        else
+          setNum(num => num - 1)
+      }, 100)
+    }
+
+    tt()
+  }
+
+  const autoAddEnd = () => {
+    console.log('Mouse up!')
+    clearInterval(inter)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -28,8 +49,13 @@ function App () {
         <h1>Hello 胡牧之！！</h1>
         <h1>Hello My Son! I Love U!</h1>
         <h2>Number is : {num}</h2>
-        <button onClick={fn} style={btnStyle}>Add</button>
-        <button onClick={fnDel} style={btnStyle}>Delete</button>
+        <button onMouseDown={() => { autoAdd() }} onMouseUp={autoAddEnd}
+          onTouchStart={() => { autoAdd() }} onTouchEnd={autoAddEnd}
+          onClick={fn} style={btnStyle}>Add</button>
+
+        <button onMouseDown={() => { autoAdd(false) }} onMouseUp={autoAddEnd}
+          onTouchStart={() => { autoAdd(false) }} onTouchEnd={autoAddEnd}
+          onClick={fnDel} style={btnStyle}>Delete</button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
